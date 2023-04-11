@@ -1,0 +1,12 @@
+<p>myc04-ngif works!</p>
+<div *ngIf="age >= 18; else forChildren">
+    此处是成年家长看到的内容。。。
+</div>
+<ng-template #forChildren>
+    此处是未成年的宝宝们看到的内容。。。
+</ng-template>
+<!-- <hr>
+<button *ngIf="hasMore; else noMore" (click)="changeMore()">加载更多</button>
+<ng-template #noMore>
+    已经到底线了
+</ng-template> -->

@@ -1,0 +1,28 @@
+<p>myc08-ngmodel works!</p>
+<!-- View -->
+<!-- <input [(ngModel)]="uname" placeholder="请输入用户名" (ngModelChange)="doUnameChange()"> -->
+<!-- Angular专用事件：“模型数据改变” ngModelChange -->
+<!-- <p>当前的用户输入：{{uname}}</p> -->
+<hr>
+<!-- 
+    练习：注册新用户时，密码字段随着输入的进行，后面span中显示提示文字，可能为：
+        密码长度应该在6~12位之间
+        密码太短了
+        密码长度合适
+        密码太长了
+ -->
+<input type="text" placeholder="请输入密码" [(ngModel)]="uname" (ngModelChange)="doUnameChange()">
+<span display = "inline" [ngSwitch]="pattern">
+<p *ngSwitchCase="1">
+    密码太短了
+</p>
+<p *ngSwitchCase="2">
+    密码太长了
+</p>
+<p *ngSwitchCase="3">
+    密码长度合适
+</p>
+<p *ngSwitchDefault>
+    密码长度应该在6~12位之间
+</p>
+</span>
